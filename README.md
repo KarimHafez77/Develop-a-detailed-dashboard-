@@ -1,4 +1,4 @@
-[Document1.pdf](https://github.com/user-attachments/files/21090576/Document1.pdf)# Develop-a-detailed-dashboard
+# Develop-a-detailed-dashboard
 
 Key Features to Implement Based on Your Outputs
 1. Barista Upsell Performance Dashboard
