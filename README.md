@@ -1,4 +1,4 @@
-# Develop-a-detailed-dashboard
+[Document1.pdf](https://github.com/user-attachments/files/21090576/Document1.pdf)# Develop-a-detailed-dashboard
 
 Key Features to Implement Based on Your Outputs
 1. Barista Upsell Performance Dashboard
@@ -27,3 +27,10 @@ Revenue by channel breakdown (walk-in, social media, etc.)
 Predictive modeling for future promotions
 
 Real-time data integration capabilities
+![Uploading لقطة شاشة 2025-07-06 202839.png…]()
+
+
+![لقطة شاشة 2025-07-06 202853](https://github.com/user-attachments/assets/e7f19c47-1d59-4e02-9bc6-24bdf6e64f1a)
+
+![Uploading لقطة شاشة 2025-07-06 202910.png…]()
+
