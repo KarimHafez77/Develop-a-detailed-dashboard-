@@ -1,0 +1,98 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datetime import datetime
+
+# Read CSV file
+def read_csv_file(file_path):
+    # List of possible encodings
+    encodings = ['utf-8', 'latin1', 'cp1252', 'iso-8859-1']
+    
+    for encoding in encodings:
+        try:
+            print(f"Attempting to read the file using the encoding: {encoding}")
+            df = pd.read_csv(file_path, encoding=encoding)
+            print(f"Successfully read the file using the encoding: {encoding}")
+            return df
+        except Exception as e:
+            print(f"Failed to read the file using the encoding: {encoding}: {e}")
+            continue
+    
+    print("Failed to read all attempts")
+    return None
+
+# Analyze data
+def analyze_data(df):
+    # Convert the date column to datetime type
+    df['Date'] = pd.to_datetime(df['Date'])
+    
+    # Add month column
+    df['Month'] = df['Date'].dt.month
+    
+    # Analyze revenue by month
+    monthly_revenue = df.groupby('Month')['Revenue'].agg(['mean', 'sum']).reset_index()
+    
+    # Draw revenue chart by month
+    plt.figure(figsize=(12, 6))
+    
+    # Draw average daily revenue chart
+    plt.subplot(1, 2, 1)
+    sns.barplot(x='Month', y='mean', data=monthly_revenue)
+    plt.title('Average daily revenue by month')
+    plt.xlabel('Month')
+    plt.ylabel('Average daily revenue')
+    
+    # Draw total monthly revenue chart
+    plt.subplot(1, 2, 2)
+    sns.barplot(x='Month', y='sum', data=monthly_revenue)
+    plt.title('Total monthly revenue')
+    plt.xlabel('Month')
+    plt.ylabel('Total revenue')
+    
+    plt.tight_layout()
+    plt.show()
+    
+    # Analyze revenue by channel (Channel)
+    channel_revenue = df.groupby('Channel')['Revenue'].mean().sort_values(ascending=False)
+    
+    print("\nAverage revenue by channel:")
+    print(channel_revenue)
+    
+    # Draw revenue chart by channel
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=channel_revenue.index, y=channel_revenue.values)
+    plt.title('Average revenue by channel')
+    plt.xlabel('Channel')
+    plt.ylabel('Average revenue')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+    
+    # Analyze revenue by customer type
+    customer_type_revenue = df.groupby('Customer Type')['Revenue'].mean().sort_values(ascending=False)
+    
+    print("\nAverage revenue by customer type:")
+    print(customer_type_revenue)
+    
+    # Draw revenue chart by customer type
+    plt.figure(figsize=(8, 6))
+    sns.barplot(x=customer_type_revenue.index, y=customer_type_revenue.values)
+    plt.title('Average revenue by customer type')
+    plt.xlabel('Customer type')
+    plt.ylabel('Average revenue')
+    plt.tight_layout()
+    plt.show()
+
+def main():
+    # Change the file path to your CSV file path
+    file_path = "E:/Cursor/01JTBDKPFDA3HPMPA3K3EPTNZ9.csv"
+    
+    # Read data
+    df = read_csv_file(file_path)
+    
+    if df is not None:
+        # Analyze data
+        analyze_data(df)
+
+if __name__ == "__main__":
+    main()
