@@ -27,10 +27,8 @@ Revenue by channel breakdown (walk-in, social media, etc.)
 Predictive modeling for future promotions
 
 Real-time data integration capabilities
-![Uploading لقطة شاشة 2025-07-06 202839.png…]()
+
+![لقطة شاشة 2025-07-06 202839](https://github.com/user-attachments/assets/127eed1c-9d10-4912-9e50-f7950991abaa)
 
 
-![لقطة شاشة 2025-07-06 202853](https://github.com/user-attachments/assets/e7f19c47-1d59-4e02-9bc6-24bdf6e64f1a)
-
-![Uploading لقطة شاشة 2025-07-06 202910.png…]()
 
