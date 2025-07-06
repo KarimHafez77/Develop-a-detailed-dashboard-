@@ -33,3 +33,5 @@ Real-time data integration capabilities
 
 
 ![لقطة شاشة 2025-07-06 202853](https://github.com/user-attachments/assets/e82dea85-84c4-4ad8-8974-fa68c5b40344)
+
+![لقطة شاشة 2025-07-06 202910](https://github.com/user-attachments/assets/db3876fd-8a32-4453-880c-44cf0d3feaa0)
